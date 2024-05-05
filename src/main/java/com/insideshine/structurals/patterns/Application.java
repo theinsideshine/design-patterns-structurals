@@ -1,10 +1,9 @@
 package com.insideshine.structurals.patterns;
 
-import com.insideshine.structurals.patterns.adapters.AdapterClient;
-import com.insideshine.structurals.patterns.adapters.EmailSender;
-import com.insideshine.structurals.patterns.adapters.SendGridAdapter;
-import com.insideshine.structurals.patterns.adapters.SendindBlueAdapter;
-import org.springframework.boot.SpringApplication;
+import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.ServicioCredito;
+import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.ServicioTarjeta;
+import com.insideshine.structurals.patterns.bridge.banca.refined.abstration.EmpresaServicioFactory;
+import com.insideshine.structurals.patterns.bridge.banca.refined.abstration.ParticularServicioFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -12,23 +11,62 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		String from = "pablo.gimenez@gmail.com";
-		String to = "educaciones@gmail.com";
-		String subject = "Message of : aca mensaje" ;
-		String body ="text/plain";
+//		System.out.println("Adapter pattern");
+//
+//		String from = "pablo.gimenez@gmail.com";
+//		String to = "educaciones@gmail.com";
+//		String subject = "Message of : aca mensaje" ;
+//		String body ="text/plain";
+//
+//
+//		EmailSender sender = new SendGridAdapter();
+//		AdapterClient client1 = new AdapterClient(sender);
+//
+//		client1.execute(from,to,subject,body);
+//
+//		sender = new SendindBlueAdapter();
+//		client1 = new AdapterClient(sender);
+//		client1.execute(from,to,subject,body);
 
 
-		EmailSender sender = new SendGridAdapter();
-		AdapterClient client1 = new AdapterClient(sender);
+		System.out.println("Brige pattern");
 
-		client1.execute(from,to,subject,body);
+		/*//Create machines
+		ChurroMachineChocolate cmChocolate = new ChurroMachineChocolate();
+		ChurroMachineStrawberry cmStrawberry = new ChurroMachineStrawberry();
 
-		sender = new SendindBlueAdapter();
-		client1 = new AdapterClient(sender);
-		client1.execute(from,to,subject,body);
+		//Create Factory
+
+		SmallChurroFactory smallChurroFactory = new SmallChurroFactory(cmChocolate);
+		MediumChurroFactory mediumChurroFactory =  new MediumChurroFactory(cmStrawberry);
+		LargeChurroFactory largeChurroFactory = new LargeChurroFactory(cmChocolate);
+
+		//Start Factory
+
+		smallChurroFactory.prepareChurro();
+		mediumChurroFactory.prepareChurro();
+		largeChurroFactory.prepareChurro();*/
 
 
+		//Crear servicio
+		ServicioCredito servicioCredito = new ServicioCredito();
+		ServicioTarjeta servicioTarjeta = new ServicioTarjeta();
 
+		//Crear Fabrica
+		EmpresaServicioFactory empresaServicioFactory = new EmpresaServicioFactory(servicioCredito);
+		ParticularServicioFactory particularServicioFactory = new ParticularServicioFactory(servicioTarjeta);
+
+		//Empezar fabrica
+		empresaServicioFactory.prepararServicio();
+		particularServicioFactory.prepararServicio();
+
+		//Editar Fabrica
+		 empresaServicioFactory = new EmpresaServicioFactory(servicioTarjeta);
+		 particularServicioFactory = new ParticularServicioFactory(servicioCredito);
+
+		//Empezar fabrica
+		empresaServicioFactory.prepararServicio();
+		particularServicioFactory.prepararServicio();
 
 
 	}
