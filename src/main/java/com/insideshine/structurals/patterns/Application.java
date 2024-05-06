@@ -4,6 +4,8 @@ import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.Se
 import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.ServicioTarjeta;
 import com.insideshine.structurals.patterns.bridge.banca.refined.abstration.EmpresaServicioFactory;
 import com.insideshine.structurals.patterns.bridge.banca.refined.abstration.ParticularServicioFactory;
+import com.insideshine.structurals.patterns.composite.Archivo;
+import com.insideshine.structurals.patterns.composite.Directorio;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -47,6 +49,7 @@ public class Application {
 		mediumChurroFactory.prepareChurro();
 		largeChurroFactory.prepareChurro();*/
 
+		/*System.out.println("Brige pattern");
 
 		//Crear servicio
 		ServicioCredito servicioCredito = new ServicioCredito();
@@ -66,9 +69,20 @@ public class Application {
 
 		//Empezar fabrica
 		empresaServicioFactory.prepararServicio();
-		particularServicioFactory.prepararServicio();
+		particularServicioFactory.prepararServicio();*/
 
+		Directorio doc = new Directorio("Documentos");
+		Directorio java = new Directorio("Java");
 
+		java.addComponente(new Archivo("patron-composite.doc"));
+		Directorio stream = new Directorio("Api Stream");
+		stream.addComponente(new Archivo("stream-map.doc"));
+		java.addComponente(stream);
+        doc.addComponente(java);
+		doc.addComponente(new Archivo("logo.png"));
+		doc.addComponente(new Archivo("cv.doc"));
+
+		System.out.println(doc.mostrar(0));
 	}
 
 }
