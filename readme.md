@@ -9,3 +9,9 @@ Adapter pattern
 
 Bridge pattern.
 [![Bridge-pattern](images/video-bridge.png)](https://youtu.be/hBaWMPSD5Jo)
+
+
+Composite pattern.
+[![Composite-pattern](images)]()
+
+

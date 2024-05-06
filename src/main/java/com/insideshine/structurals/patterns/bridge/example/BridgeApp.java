@@ -1,4 +1,5 @@
-package com.insideshine.structurals.patterns;
+package com.insideshine.structurals.patterns.bridge.example;
+
 
 import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.ServicioCredito;
 import com.insideshine.structurals.patterns.bridge.banca.concrete.implementor.ServicioTarjeta;
@@ -7,27 +8,9 @@ import com.insideshine.structurals.patterns.bridge.banca.refined.abstration.Part
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class BridgeApp {
 
 	public static void main(String[] args) {
-
-//		System.out.println("Adapter pattern");
-//
-//		String from = "pablo.gimenez@gmail.com";
-//		String to = "educaciones@gmail.com";
-//		String subject = "Message of : aca mensaje" ;
-//		String body ="text/plain";
-//
-//
-//		EmailSender sender = new SendGridAdapter();
-//		AdapterClient client1 = new AdapterClient(sender);
-//
-//		client1.execute(from,to,subject,body);
-//
-//		sender = new SendindBlueAdapter();
-//		client1 = new AdapterClient(sender);
-//		client1.execute(from,to,subject,body);
-
 
 		System.out.println("Brige pattern");
 
@@ -46,6 +29,7 @@ public class Application {
 		smallChurroFactory.prepareChurro();
 		mediumChurroFactory.prepareChurro();
 		largeChurroFactory.prepareChurro();*/
+
 
 
 		//Crear servicio
