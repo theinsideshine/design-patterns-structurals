@@ -14,4 +14,6 @@ Bridge pattern.
 Composite pattern.
 [![Composite-pattern](images)]()
 
-fg
+
+Decorator pattern.
+[![Decorator-pattern](images)]()
