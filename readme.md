@@ -12,8 +12,8 @@ Bridge pattern.
 
 
 Composite pattern.
-[![Composite-pattern](images)]()
+[![Composite-pattern](images/video-composite.png)](https://youtu.be/2oVn_ZDmqzk)
 
 
 Decorator pattern.
-[![Decorator-pattern](images)]()
+[![Decorator-pattern](images/video-decorator.png)](https://youtu.be/BpnoNLzSdoI)

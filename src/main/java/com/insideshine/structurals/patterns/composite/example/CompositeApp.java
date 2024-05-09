@@ -24,14 +24,14 @@ public class CompositeApp {
 
 		System.out.println(doc.mostrar(0));
 
-		/*boolean encontrado = doc.buscar("patron-composite.doc");
+		boolean encontrado = doc.buscar("patron-composite.doc");
 		System.out.println("Encontrado \"patron-composite.doc\":"+encontrado);
 
 		 encontrado = doc.buscar("Api Stream");
 		System.out.println("Encontrado \"Api Stream\":"+encontrado);
 
 		encontrado = doc.buscar("Api Stre");
-		System.out.println("Encontrado \"Api Stre\":"+encontrado);*/
+		System.out.println("Encontrado \"Api Stre\":"+encontrado);
 	}
 
 }

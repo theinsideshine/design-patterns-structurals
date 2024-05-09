@@ -10,10 +10,10 @@ public class DecoradorApp {
 
     public static void main(String[] args) {
 
-        Formateable texto = new Texto("Hola que tal , Pablo");
+        Formateable texto = new Texto("Hola que tal ,soy  Pablo");
 
         MayusculasDecorador mayusculasDecorador = new MayusculasDecorador(texto);
-        //ReversaDecorador reversaDecorador = new ReversaDecorador(mayusculasDecorador);
+
         SubrayadoDecorador subrayadoDecorador =new SubrayadoDecorador(mayusculasDecorador);
 
         System.out.println(subrayadoDecorador.darFormato());
