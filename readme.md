@@ -21,3 +21,9 @@ Decorator pattern.
 
 Facade pattern.
 [![Facade-pattern](images)]()
+
+
+FlyWeight pattern.
+[![FlyWeight-pattern](images)]()
+
+
