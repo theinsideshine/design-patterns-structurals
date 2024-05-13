@@ -27,3 +27,9 @@ FlyWeight pattern.
 [![FlyWeight-pattern](images)]()
 
 
+Proxy pattern.
+[![Proxy-pattern](images)]()
+
+
+
+
