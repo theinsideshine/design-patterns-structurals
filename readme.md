@@ -20,15 +20,15 @@ Decorator pattern.
 
 
 Facade pattern.
-[![Facade-pattern](images)]()
+[![Facade-pattern](images/video-facade.png)](https://youtu.be/Uu0ZHGbr778)
 
 
 FlyWeight pattern.
-[![FlyWeight-pattern](images)]()
+[![FlyWeight-pattern](images/video-flyweight.png)](https://youtu.be/Ca5DzcFA5Yw)
 
 
 Proxy pattern.
-[![Proxy-pattern](images)]()
+[![Proxy-pattern](images/video-proxy.png)](https://youtu.be/TrYsqYr8ZsE)
 
 
 
